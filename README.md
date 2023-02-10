@@ -1,4 +1,4 @@
-# k8s-vm
+# Lazy Guide
 1. Download ubuntu-20.04-server-cloudimg-amd64.img image from Ubuntu Cloud Image Site
 2. Run build.sh (change docker repo to your repo)
 3. Create namespace using command kubectl create ns s-sungam
