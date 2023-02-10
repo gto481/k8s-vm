@@ -1,6 +1,6 @@
 # Lazy Guide
 1. Download **ubuntu-20.04-server-cloudimg-amd64.img** image from Ubuntu Cloud Image Site
-2. Run ```./build.sh``` (change docker repo to your repo)
+2. Upload image to docker repo by executing ```./build.sh``` (change docker repo to your repo)
 3. Create namespace using command ```kubectl create ns s-sungam```
 4. Create VM image using command ```kubectl apply -f ubuntu-cloud-base-datavolume.yaml``` (change url to your docker repo as the same as step 2)
 5. Vefify VM image import is success using command ```kubectl get datavolume -n s-sungam```
