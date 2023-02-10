@@ -6,7 +6,7 @@
 5. Vefify VM image import is success using command ```kubectl get datavolume -n s-sungam``` (the progress should be 100%)
 6. Verify PVC to come up and bound using command ```kubectl get pvc -n s-sungam```
 7. Create VM using command ```kubectl apply -f vm_ubuntu.yml```
-8. Verify VM is ready and in shutdown state using command ```kubectl get vm -n s-sungam```
+8. Verify VM is ready using command ```kubectl get vm -n s-sungam```
 9. Verify VM instance is running using command ```kubectl get vmi -n s-sungam```
 10. Access to VM instance via console using command ```virtctl console vm1 -n s-sungam```
 11. Expose VM instance ssh port using command ```virtctl expose vmi vm1 --name=vm1-ssh --port=20222 --target-port=22 --type=NodePort -n s-sungam```
