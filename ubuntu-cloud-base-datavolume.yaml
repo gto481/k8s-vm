@@ -1,0 +1,15 @@
+apiVersion: cdi.kubevirt.io/v1alpha1
+kind: DataVolume
+metadata:
+  name: ubuntu-cloud-base
+  namespace: s-sungam
+spec:
+  source:
+    registry:
+      url: "docker://gto481/ubuntu:cloud-base"
+  pvc:
+    accessModes:
+      - ReadWriteOnce
+    resources:
+      requests:
+        storage: 8Gi
