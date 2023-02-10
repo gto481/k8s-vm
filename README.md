@@ -7,7 +7,12 @@
 6. Verify PVC to come up and bound using command kubectl get pvc -n s-sungam
 7. Create VM using command kubectl apply -f vm_ubuntu.yml
 8. Verify VM is ready and in shutdown state using command kubectl get vm -n s-sungam
-9. Start VM instance using command virtctl start vm1 -n s-sungam
+9. Verify VM instance is running using command kubectl get vmi -n s-sungam
 10. Access to VM instance via console using command virtctl console vm1 -n s-sungam
 11. Expose VM instance ssh port using command virtctl expose vmi vm1 --name=vm1-ssh --port=20222 --target-port=22 --type=NodePort -n s-sungam
 12. You should be able to ssh to the VM instance using ubuntu@[k8s node ip]:20222 with password ubuntu
+
+
+# Appendix
+1. Start VM instance - virtctl start vm1 -n s-sungam
+2. Stop VM instance - virtctl stop vm1 -n s-sungam
