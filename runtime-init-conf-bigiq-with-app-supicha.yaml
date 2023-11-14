@@ -89,10 +89,8 @@ extension_services:
             class: License
             hypervisor: aws
             licensePool: mypool
-            licenseType: licensePool
+            licenseType: regKey
             reachable: false
-            skuKeyword1: F5-BIG-MSP-BT-1G
-            tenant: myTenant
             unitOfMeasure: hourly
           My_System:
             autoPhonehome: true
