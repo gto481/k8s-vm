@@ -89,7 +89,7 @@ extension_services:
             class: License
             hypervisor: aws
             licensePool: mypool
-            licenseType: RegKey
+            licenseType: licensePool
             reachable: false
             skuKeyword1: F5-BIG-MSP-BT-1G
             tenant: myTenant
