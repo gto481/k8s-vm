@@ -89,9 +89,9 @@ extension_services:
             class: License
             hypervisor: aws
             licensePool: mypool
-            licenseType: regKey
+            licenseType: licensePool
             reachable: false
-            unitOfMeasure: hourly
+            tenant: Optional
           My_System:
             autoPhonehome: true
             class: System
