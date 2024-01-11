@@ -70,14 +70,22 @@ extension_services:
             ui.advisory.color: blue
             ui.advisory.text: "Provisioned via Runtime Init and DO"
           My_Provisioning:
-            asm: nominal
             class: Provision
-            ltm: nominal
+            ltm: none
+            asm: nominal
           My_Ntp:
             class: NTP
             servers:
               - 169.254.169.253
             timezone: UTC
+          admin:
+            class: User
+            userType: regular
+            partitionAccess:
+              all-partitions:
+                role: admin
+            shell: tmsh
+            password: Admin@F5!!
           My_Dns:
             class: DNS
             nameServers:
@@ -117,13 +125,10 @@ extension_services:
               class: Pool
               remark: Service 1 shared pool
               members:
-                - servicePort: 80
-                  addressDiscovery: aws
-                  region: '{{{REGION}}}'
-                  updateInterval: 60
-                  tagKey: 'aws:cloudformation:logical-id'
-                  tagValue: appAutoscaleGroup
-                  addressRealm: private
+                - servicePort: 9090
+                  enable: true
+                  serverAddresses:
+                    - 10.0.0.46
               monitors:
                 - http
             telemetry_local_rule:
